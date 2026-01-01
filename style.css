@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+    background-color: #f2e9e1;
+    color: #1a1a1a;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.nav-content {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #1a1a1a;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.text-side {
+    flex: 1;
+    z-index: 10;
+}
+
+/* Buttons Styling */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 100px;
+    transition: 0.3s ease;
+}
+
+.btn-outline {
+    border: 2px solid #8caec4;
+    color: #8caec4;
+}
+
+.btn-solid {
+    background-color: #8caec4;
+    color: white;
+}
+
+.arrow {
+    height: 32px;
+    margin-left: 12px;
+}
+
+/* Face Image (Stick to right, full height) */
+.face-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.face-base {
+    height: 100%;
+    width: auto;
+}
+
+.eyes-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+}
+
+/* Responsive: Shrink font sizes on smaller screens */
+@media (max-width: 1200px) {
+    .h1, .name { font-size: 64px; }
+    .main-p { font-size: 18px; }
+}
