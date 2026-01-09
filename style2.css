@@ -1,0 +1,194 @@
+body, html {
+    width: 100%;
+    background-color: #1a1a1a; 
+    color: #f2e9e1;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px; /* Original height */
+    display: flex;
+    justify-content: center;
+    z-index: 1000; /* High z-index to stay on top */
+    transition: all 0.4s ease; /* Smooth transition for shrinking */
+    background-color: transparent; /* Start transparent */
+}
+
+.navbar.scrolled {
+    height: 60px;
+    background-color: rgba(26, 26, 26, 0.95); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    transition: font-weight 0.2s ease;
+}
+
+.nav-content {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects-container {
+    width: 80%;
+    margin: 150px auto 100px; /* Space for fixed navbar */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 projects per row */
+    gap: 60px 40px;
+    margin-top: 60px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s ease;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #333; /* Placeholder color */
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effects */
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.top-padding{
+    height: 60px;
+}
+/* For the 5th project or single items */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack on tablet/mobile */
+    }
+}
+
+/* --- DETAIL PAGE SPECIFICS --- */
+.detail-page {
+    overflow-y: auto !important; /* Ensure the detail page can scroll */
+}
+
+/* style.css */
+
+.project-hero {
+    position: relative;
+    height: 80vh; /* This gives the header height (80% of the screen) */
+    width: 100%;
+    display: flex;
+    align-items: flex-end; /* Keeps your title at the bottom of the hero */
+    overflow: hidden;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keeps the image behind the text */
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space without stretching */
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(26, 26, 26, 0.1), #1a1a1a);
+}
+
+.hero-title-box {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.detail-content {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.section {
+    margin-top: 100px;
+    border-top: 1px solid rgba(242, 233, 225, 0.1);
+    padding-top: 40px;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.tech-list {
+    list-style: none;
+    border-left: 2px solid #8caec4;
+    padding-left: 20px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.image-gallery img, .full-width-img {
+    width: 100%;
+    border-radius: 8px;
+    filter: grayscale(20%); /* Adds to the 'cold' aesthetic */
+}
+
+.placeholder-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}

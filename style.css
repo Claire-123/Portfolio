@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -38,6 +43,7 @@ body, html {
 
 .nav-links a {
     color: #1a1a1a;
+    text-decoration: none;
 }
 
 .hero {
@@ -69,7 +75,7 @@ body, html {
 .btn {
     display: flex;
     align-items: center;
-    padding: 15px 30px;
+    padding: 10px 30px;
     border-radius: 100px;
     transition: 0.3s ease;
 }
